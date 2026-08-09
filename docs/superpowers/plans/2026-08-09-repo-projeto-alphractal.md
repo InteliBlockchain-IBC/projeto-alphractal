@@ -1,6 +1,6 @@
 # Repo projeto-alphractal Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Criar e publicar o repositório público `InteliBlockchain-IBC/projeto-alphractal` — landing page do primeiro projeto do clube com um parceiro externo, com README curto, TAP versionado e licença MIT.
 
@@ -27,7 +27,7 @@
 **Interfaces:**
 - Produces: arquivo `LICENSE` na raiz — sem dependência de outros arquivos.
 
-- [ ] **Step 1: Criar o arquivo `LICENSE`**
+- [x] **Step 1: Criar o arquivo `LICENSE`**
 
 Conteúdo exato (texto padrão MIT):
 
@@ -55,12 +55,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-- [ ] **Step 2: Verificar**
+- [x] **Step 2: Verificar**
 
 Run: `test -f LICENSE && head -3 LICENSE`
 Expected: imprime `MIT License` / linha em branco / `Copyright (c) 2026 Inteli Blockchain`.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add LICENSE
@@ -77,7 +77,7 @@ git commit -m "chore: adiciona licença MIT"
 **Interfaces:**
 - Produces: `assets/banner_blockas.png` — consumido pela tag `<img>` do `README.md` (Task 4).
 
-- [ ] **Step 1: Copiar o banner**
+- [x] **Step 1: Copiar o banner**
 
 O arquivo de origem está fora deste repositório, em outro repositório do workspace. Caminho absoluto de origem (ajuste se o workspace estiver em outro local):
 `/home/messiasolivindo/Documentos/github/inteli_blockchain/aulas/others/assets/banner_blockas.png`
@@ -87,12 +87,12 @@ mkdir -p assets
 cp "/home/messiasolivindo/Documentos/github/inteli_blockchain/aulas/others/assets/banner_blockas.png" assets/banner_blockas.png
 ```
 
-- [ ] **Step 2: Verificar**
+- [x] **Step 2: Verificar**
 
 Run: `file assets/banner_blockas.png`
 Expected: `assets/banner_blockas.png: PNG image data, ...` (arquivo binário válido, não vazio).
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add assets/banner_blockas.png
@@ -109,7 +109,7 @@ git commit -m "chore: adiciona banner do clube"
 **Interfaces:**
 - Produces: `docs/TAP-Alphractal.pdf` — consumido pelo link da seção "Links" do `README.md` (Task 4).
 
-- [ ] **Step 1: Copiar e renomear o TAP**
+- [x] **Step 1: Copiar e renomear o TAP**
 
 Caminho absoluto de origem (ajuste se o workspace estiver em outro local):
 `/home/messiasolivindo/Documentos/github/inteli_blockchain/documentos_projetos/TAP - Inteli Blockchain e Alphactral.pdf`
@@ -121,12 +121,12 @@ cp "/home/messiasolivindo/Documentos/github/inteli_blockchain/documentos_projeto
 
 Note: o nome do arquivo de origem tem o typo "Alphactral" — o novo nome (`TAP-Alphractal.pdf`) já corrige isso. Não altere o conteúdo do PDF, só o nome do arquivo.
 
-- [ ] **Step 2: Verificar**
+- [x] **Step 2: Verificar**
 
 Run: `file "docs/TAP-Alphractal.pdf"`
 Expected: `docs/TAP-Alphractal.pdf: PDF document, ...`
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add "docs/TAP-Alphractal.pdf"
@@ -144,7 +144,7 @@ git commit -m "docs: adiciona TAP do projeto Alphractal"
 - Consumes: `assets/banner_blockas.png` (Task 2), `docs/TAP-Alphractal.pdf` (Task 3) — ambos já devem existir no repo antes deste task.
 - Produces: `README.md` na raiz — landing page pública do repositório, sem dependentes dentro deste plano.
 
-- [ ] **Step 1: Criar o `README.md`**
+- [x] **Step 1: Criar o `README.md`**
 
 Conteúdo exato:
 
@@ -201,12 +201,12 @@ atualizado com instruções de setup e instalação nesse momento.
 </p>
 ````
 
-- [ ] **Step 2: Verificar renderização local**
+- [x] **Step 2: Verificar renderização local**
 
 Run: `grep -c "TAP-Alphractal.pdf" README.md`
 Expected: `1` (o link para o TAP está presente e usa o caminho relativo correto).
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add README.md
@@ -222,7 +222,7 @@ git commit -m "docs: adiciona README do projeto Alphractal"
 **Interfaces:**
 - Consumes: todos os commits das Tasks 1–4 já devem existir na branch `main` local antes deste task.
 
-- [ ] **Step 1: Confirmar autenticação e branch**
+- [x] **Step 1: Confirmar autenticação e branch**
 
 ```bash
 gh auth status
@@ -232,7 +232,7 @@ git log --oneline
 
 Expected: `gh auth status` mostra "Logged in to github.com" com escopo `repo`; branch atual é `main`; o log mostra os commits das Tasks 1–4 (mais o commit do spec já existente).
 
-- [ ] **Step 2: Criar o repositório remoto público e fazer o primeiro push**
+- [x] **Step 2: Criar o repositório remoto público e fazer o primeiro push**
 
 ```bash
 gh repo create InteliBlockchain-IBC/projeto-alphractal \
@@ -250,7 +250,7 @@ git remote add origin https://github.com/InteliBlockchain-IBC/projeto-alphractal
 git push -u origin main
 ```
 
-- [ ] **Step 3: Verificar o repositório publicado**
+- [x] **Step 3: Verificar o repositório publicado**
 
 ```bash
 gh repo view InteliBlockchain-IBC/projeto-alphractal --web
@@ -258,7 +258,7 @@ gh repo view InteliBlockchain-IBC/projeto-alphractal --web
 
 Expected: abre o repositório no navegador; confirmar visualmente que o README renderiza com o banner, o link do TAP funciona e abre o PDF, e que o repo está marcado como público.
 
-- [ ] **Step 4: Nenhum commit adicional necessário**
+- [x] **Step 4: Nenhum commit adicional necessário**
 
 Este task não cria arquivos novos — apenas publica o que já foi commitado nas tasks anteriores.
 
@@ -266,7 +266,7 @@ Este task não cria arquivos novos — apenas publica o que já foi commitado na
 
 ## Verificação final (checklist do spec)
 
-- [ ] `README.md` renderiza corretamente no GitHub (banner aparece, link do TAP funciona).
-- [ ] `docs/TAP-Alphractal.pdf` abre e é idêntico ao PDF original em `documentos_projetos/`.
-- [ ] `LICENSE` é o texto padrão MIT, copyright "Inteli Blockchain".
-- [ ] Repositório criado como **público** na org `InteliBlockchain-IBC`, branch `main`, push feito com sucesso.
+- [x] `README.md` renderiza corretamente no GitHub (banner aparece, link do TAP funciona).
+- [x] `docs/TAP-Alphractal.pdf` abre e é idêntico ao PDF original em `documentos_projetos/`.
+- [x] `LICENSE` é o texto padrão MIT, copyright "Inteli Blockchain".
+- [x] Repositório criado como **público** na org `InteliBlockchain-IBC`, branch `main`, push feito com sucesso.
