@@ -37,11 +37,10 @@ institucionais de alto volume.
 
 ---
 
-## 🗓️ Próximos passos
+## 💻 Projetos desenvolvidos
 
-O código do MVP (backend + frontend) entra neste mesmo repositório conforme o
-desenvolvimento avança, a partir do kickoff em 18/08/26. Este README será
-atualizado com instruções de setup e instalação nesse momento.
+Os repositóros do MVP (backend + frontend) entra neste mesmo repositório conforme o
+desenvolvimento avança, a partir do kickoff em 18/08/26.
 
 ---
 
