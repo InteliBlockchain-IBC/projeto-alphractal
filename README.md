@@ -7,9 +7,6 @@
 <p align="center">
   <strong>Projeto do clube Inteli Blockchain em parceria com a Alphractal.</strong>
 </p>
-<p align="center">
-  🔵 <strong>Status: Planejamento</strong> — kickoff em 18/08/26
-</p>
 
 ---
 
